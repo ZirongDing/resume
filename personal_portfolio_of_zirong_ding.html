@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>丁梓容 - 个人主页 | 供应链管理 & 数据分析 & RPA自动化</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#0f4c81',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            accent: '#10b981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Microsoft YaHei', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom animations & fine-tuned styles */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(51, 65, 85, 0.6);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0284c7 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background: #e2e8f0;
+        }
+        @media (min-width: 768px) {
+            .timeline-line::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-400 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                    丁
+                </div>
+                <span class="font-bold text-lg tracking-tight">丁梓容 <span class="text-xs px-2 py-0.5 bg-brand-100 text-brand-700 dark:bg-brand-900/60 dark:text-brand-300 rounded-full font-normal ml-1">211本科</span></span>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-brand-500 transition-colors">关于我</a>
+                <a href="#abilities" class="hover:text-brand-500 transition-colors">我的能力</a>
+                <a href="#experiences" class="hover:text-brand-500 transition-colors">我的经历</a>
+                <a href="#contact" class="hover:text-brand-500 transition-colors">联系方式</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <!-- Contact CTA Button -->
+                <a href="mailto:zirongding@hainanu.edu.cn" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-lg bg-brand-600 hover:bg-brand-700 text-white shadow-sm transition-all duration-200 hover:scale-[1.02]">
+                    <i class="fa-regular fa-paper-plane"></i> 发送邮件
+                </a>
+                <!-- Mobile menu toggle button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+            <a href="#about" class="block py-2 text-sm hover:text-brand-500">关于我</a>
+            <a href="#abilities" class="block py-2 text-sm hover:text-brand-500">我的能力</a>
+            <a href="#experiences" class="block py-2 text-sm hover:text-brand-500">我的经历</a>
+            <a href="#contact" class="block py-2 text-sm hover:text-brand-500">联系方式</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero / Section: About Me -->
+        <section id="about" class="relative overflow-hidden py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-1/2 -left-24 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Details -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-300 text-xs font-semibold border border-brand-100 dark:border-slate-700">
+                        <i class="fa-solid fa-graduation-cap"></i> 海南大学 · 物流管理专业 (2023-2027)
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        你好，我是 <span class="gradient-text">丁梓容</span>
+                    </h1>
+                    
+                    <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+                        专注于<strong class="text-slate-900 dark:text-white">供应链与物流系统优化、数据挖掘分析与RPA流程自动化</strong>。擅长通过建模仿真（FlexSim/BizSand）提质增效，拥有京东物流与CHFS深度实习实践，具备商业分析报告制作与高端答辩视觉策划能力。
+                    </p>
+
+                    <!-- Personal Tags -->
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-xs font-medium"><i class="fa-solid fa-boxes-packing mr-1 text-brand-500"></i>供应链/物流管理</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-xs font-medium"><i class="fa-solid fa-chart-line mr-1 text-brand-500"></i>数据分析与建模</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-xs font-medium"><i class="fa-solid fa-robot mr-1 text-brand-500"></i>RPA自动化流程</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-xs font-medium"><i class="fa-solid fa-file-powerpoint mr-1 text-brand-500"></i>商业报告与PPT排版</span>
+                    </div>
+
+                    <!-- Contact Bar -->
+                    <div class="pt-4 border-t border-slate-200 dark:border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-600 dark:text-slate-300">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-brand-600"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <div class="text-xs text-slate-400">电话 / 微信</div>
+                                <div class="font-semibold text-slate-800 dark:text-slate-200">133-1484-7538</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-brand-600"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <div class="text-xs text-slate-400">电子邮箱</div>
+                                <div class="font-semibold text-slate-800 dark:text-slate-200 truncate">zirongding@hainanu.edu.cn</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Highlights Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden border border-slate-200/80 dark:border-slate-800">
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-500/10 rounded-full blur-2xl"></div>
+                        <h3 class="text-lg font-bold mb-6 flex items-center gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
+                            <i class="fa-solid fa-award text-amber-500"></i> 学业与实践核心亮点
+                        </h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                                <div class="text-2xl font-extrabold text-brand-600 dark:text-brand-400">86.3 / 3.16</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">平均分 / GPA</div>
+                            </div>
+                            <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                                <div class="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">35,115 条</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">CHFS个人质控数据量</div>
+                            </div>
+                            <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                                <div class="text-2xl font-extrabold text-amber-600 dark:text-amber-400">国赛 / 省赛</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">逆向物流国三 / 挑战杯省金</div>
+                            </div>
+                            <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-100 dark:border-slate-800">
+                                <div class="text-2xl font-extrabold text-purple-600 dark:text-purple-400">排名第 1</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">内蒙古质控核查组督导业绩</div>
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 rounded-xl bg-brand-50/50 dark:bg-slate-800/40 border border-brand-100 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                            <i class="fa-solid fa-quote-left text-brand-400 mr-1"></i>
+                            凭借极佳的演说能力与高质量PPT视觉策划，曾在校赛中吸引第一名队伍邀请加入，并最终协助团队斩获省赛高奖。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: My Abilities (Placed FIRST per requirement) -->
+        <section id="abilities" class="py-16 bg-white dark:bg-slate-900/50 border-y border-slate-200/60 dark:border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                        我的能力 <span class="text-brand-600 dark:text-brand-400">My Capabilities</span>
+                    </h2>
+                    <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm sm:text-base">
+                        融合专业理论、数据工具与商业分析实践，致力于全方位提质增效
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1: Hard Skills & Tech -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl font-bold mb-5">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <h3 class="text-lg font-bold mb-3">专业硬核技能 & 工具</h3>
+                            <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-blue-500 mt-0.5"></i>
+                                    <span><strong>FlexSim 系统仿真:</strong> 搭建虚拟模型（如《冷链循环包装处理中心》），仿真模拟产线效率</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-blue-500 mt-0.5"></i>
+                                    <span><strong>RPA（影刀）开发:</strong> 自主构建《AI提取图片数据表》OCR自动化流程，替代高重复度操作</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-blue-500 mt-0.5"></i>
+                                    <span><strong>SQL Server / Nvivo:</strong> 数据库查询应用于库存管理；语义提取分析大文本高频概念</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-blue-500 mt-0.5"></i>
+                                    <span><strong>建模工具库:</strong> MATLAB、SPSS、Lingo、Visual Studio Code等</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Business & Modeling -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl font-bold mb-5">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <h3 class="text-lg font-bold mb-3">商业分析与量化建模</h3>
+                            <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                                    <span><strong>战略分析模型:</strong> PESTEL模型、波特五力分析、ESG环境/社会/治理评估</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                                    <span><strong>问卷设计与调研:</strong> Credamo平台问卷设计、李克特五点量表量化分析</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                                    <span><strong>BizSand 虚拟运营:</strong> 制定采购/计划/出库全链决策与成本核算仿真</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: AI & Design -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl font-bold mb-5">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+                            <h3 class="text-lg font-bold mb-3">AI 应用 & 视觉创新</h3>
+                            <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-purple-500 mt-0.5"></i>
+                                    <span><strong>AI 工作流:</strong> 熟练运用 ChatGPT, Gemini, Claude Code, Agent 工作流赋能研发</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-purple-500 mt-0.5"></i>
+                                    <span><strong>文档与视觉排版:</strong> Canva海报设计、商业计划书与高冲击力答辩PPT制作</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-purple-500 mt-0.5"></i>
+                                    <span><strong>基础前端应用:</strong> 借助 AI 与 HTML/CSS 完成简易离线网页搭建与代码调试</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Honors & Certifications -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl font-bold mb-5">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <h3 class="text-lg font-bold mb-3">荣誉证书 & 兴趣特长</h3>
+                            <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-amber-500 mt-0.5"></i>
+                                    <span><strong>外语及技能认证:</strong> CET-4、ETIC国际人才英语初级、 Outstanding Market Analysis Researchers Level 1</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-amber-500 mt-0.5"></i>
+                                    <span><strong>学业荣誉:</strong> 青云书院2025-2026品德评定（优秀）、实信网校级III等实践标兵</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-amber-500 mt-0.5"></i>
+                                    <span><strong>体育与棋艺:</strong> 羽毛球（前高中羽社社长）、国际象棋（九级棋士）、游泳、乒乓球</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: My Experiences (Ordered: University Experience AFTER High School) -->
+        <section id="experiences" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                    我的经历 <span class="text-brand-600 dark:text-brand-400">My Journey</span>
+                </h2>
+                <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm sm:text-base">
+                    从童年启蒙、高中探索，到大学阶段的深厚积累与实战演练
+                </p>
+            </div>
+
+            <!-- Tab Navigation for Experience Categories -->
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex p-1 rounded-xl bg-slate-200/80 dark:bg-slate-800 text-xs sm:text-sm font-medium">
+                    <button onclick="switchTab('college-tab')" id="btn-college-tab" class="tab-btn px-5 py-2.5 rounded-lg transition-all duration-200 bg-white dark:bg-slate-900 text-brand-600 dark:text-brand-400 shadow-sm font-bold">
+                        大学经历 (融合简历/项目/竞赛)
+                    </button>
+                    <button onclick="switchTab('highschool-tab')" id="btn-highschool-tab" class="tab-btn px-5 py-2.5 rounded-lg transition-all duration-200 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+                        高中经历
+                    </button>
+                    <button onclick="switchTab('early-tab')" id="btn-early-tab" class="tab-btn px-5 py-2.5 rounded-lg transition-all duration-200 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+                        初中及小学经历
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab Content 1: College Experience (University) -->
+            <div id="college-tab" class="tab-content transition-opacity duration-300">
+                <div class="space-y-8">
+                    <!-- Sub-heading: Internship & Operations -->
+                    <div class="border-l-4 border-brand-600 pl-4">
+                        <h3 class="text-xl font-bold">实习与工作实践</h3>
+                        <p class="text-xs text-slate-500">深入知名企业与实地调研现场，注重降本增效与精益运营</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- JD Experience Card -->
+                        <div class="glass-card rounded-2xl p-6 border border-slate-200/80 dark:border-slate-800 relative">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-300">京东集团 - 运营部</span>
+                                    <h4 class="text-base font-bold mt-2">场地运营 (P序列1级) / 储干类实习生</h4>
+                                </div>
+                                <span class="text-xs font-mono text-slate-400">2026.09 - 2026.10</span>
+                            </div>
+                            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-brand-500 mt-0.5"></i>
+                                    <span><strong>成本改善:</strong> 基于Udata平台与Excel对河北12个分拣中心核对工时薪资；基于网格绩效修正多算问题；拆解集团节降目标，通过合理关停/缩短开线节降能耗。</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-brand-500 mt-0.5"></i>
+                                    <span><strong>精益改善:</strong> 测算生产流程标准工时与自动化产能；运用IE八大浪费理论评估人机协同低效环节；熟练运用京东智慧监控系统快速定位异常。</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- CHFS Experience Card -->
+                        <div class="glass-card rounded-2xl p-6 border border-slate-200/80 dark:border-slate-800 relative">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">中国家庭金融调查中心</span>
+                                    <h4 class="text-base font-bold mt-2">质控核查督导 (内蒙古组)</h4>
+                                </div>
+                                <span class="text-xs font-mono text-slate-400">2025.07 - 2025.09</span>
+                            </div>
+                            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-emerald-500 mt-0.5"></i>
+                                    <span><strong>质控管理与第一名业绩:</strong> 带领核查组通过2,815个样本，在7个区25个小组中排名第1；个人累计核查通过35,115条数据。</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-emerald-500 mt-0.5"></i>
+                                    <span><strong>效率提升与问卷攻坚:</strong> 制作简易RPA流程自动点击页面；针对乱填问卷问题，个人自费采购小文具/纸巾作为回馈，确保问卷真实足量。</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Qiongzhou Strait Card -->
+                        <div class="glass-card rounded-2xl p-6 border border-slate-200/80 dark:border-slate-800 relative">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-100 text-purple-800 dark:bg-purple-900/60 dark:text-purple-300">重点省级研究项目</span>
+                                    <h4 class="text-base font-bold mt-2">琼州海峡第二通道综合论证研究</h4>
+                                </div>
+                                <span class="text-xs font-mono text-slate-400">2026.05 - 2026.06</span>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                对接新海港调度与航班线路，在客滚航线上随船开展货车司机OD问卷实地调研，采集车辆起讫点、货类与通行频次，为通道论证提供一手关键数据。
+                            </p>
+                        </div>
+
+                        <!-- School Roles & Assistance Card -->
+                        <div class="glass-card rounded-2xl p-6 border border-slate-200/80 dark:border-slate-800 relative">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900/60 dark:text-amber-300">校内学术与行政助理</span>
+                                    <h4 class="text-base font-bold mt-2">朋辈导师 / 研究助理 / 答辩助手</h4>
+                                </div>
+                                <span class="text-xs font-mono text-slate-400">2025 - 至今</span>
+                            </div>
+                            <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+                                <li>• 聘任为青云书院2026年新生朋辈导师（聘期一年）。</li>
+                                <li>• 担任杨雨高聘副研究员助理，整理《统计学》课件并在课堂讲解Stackelberg博弈理论。</li>
+                                <li>• 毕业答辩助手：编排分组、维普系统管理与现场流程把控。</li>
+                                <li>• 随导师开展冷链B2B企业绿色供应链论文研究，回收291份Likert量表并运用Nvivo/SPSS/DEMATEL建模。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Sub-heading: Competitions & Honors -->
+                    <div class="border-l-4 border-emerald-600 pl-4 mt-10">
+                        <h3 class="text-xl font-bold">学科竞赛与创新成果</h3>
+                        <p class="text-xs text-slate-500">以赛促学，涵盖供应链、商业策划、仿真建模与创新创业</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Competition Item 1 -->
+                        <div class="p-5 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">国赛三等奖</span>
+                                <span class="text-[10px] text-slate-400">2025.11</span>
+                            </div>
+                            <h4 class="font-bold text-sm mb-2">第九届全国绿色供应链与逆向物流设计大赛</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                独立负责PESTEL宏观政策论证，深度参与四级逆向物流MILP模型校对与重构，承担报告书与数据图表高冲击力可视化设计。
+                            </p>
+                        </div>
+
+                        <!-- Competition Item 2 -->
+                        <div class="p-5 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-blue-600 dark:text-blue-400">南部赛区三等奖 / 校一等奖 (队长)</span>
+                                <span class="text-[10px] text-slate-400">2025.06</span>
+                            </div>
+                            <h4 class="font-bold text-sm mb-2">CMAU全国大学生市场研究与商业策划大赛</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                统筹项目进度，解读134份定量问卷与12人深度访谈，构建用户画像并提出螺蛳粉高校全链路营销推广策略。
+                            </p>
+                        </div>
+
+                        <!-- Competition Item 3 -->
+                        <div class="p-5 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-purple-600 dark:text-purple-400">省赛金奖 / 校赛银奖</span>
+                                <span class="text-[10px] text-slate-400">2024.07</span>
+                            </div>
+                            <h4 class="font-bold text-sm mb-2">第十四届“挑战杯”大学生创业计划竞赛</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                校赛凭极具吸引力的PPT受邀加入第一名团队（触空科技），主导商业计划书与答辩PPT设计，助力团队成功斩获省赛金奖。
+                            </p>
+                        </div>
+
+                        <!-- Competition Item 4 -->
+                        <div class="p-5 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-amber-600 dark:text-amber-400">入围全国复赛 (队长)</span>
+                                <span class="text-[10px] text-slate-400">2025.05</span>
+                            </div>
+                            <h4 class="font-bold text-sm mb-2">2025年全国企业竞争模拟大赛</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                搭建Excel供应链嵌套关联模型（需求-库存-生产），在BizSand平台模拟牛奶工厂运营，担任财务分析师把控ROI。
+                            </p>
+                        </div>
+
+                        <!-- Competition Item 5 -->
+                        <div class="p-5 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-rose-600 dark:text-rose-400">华南赛区第5名 (校内第1)</span>
+                                <span class="text-[10px] text-slate-400">2023.10</span>
+                            </div>
+                            <h4 class="font-bold text-sm mb-2">CFA 投资分析大赛校际联盟模拟赛</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                独立完成温氏股份ESG（环境/社会/治理）三大维度评估，结合碳排放管控与“种养循环”模式撰写非财务绩效报告。
+                            </p>
+                        </div>
+
+                        <!-- Competition Item 6 -->
+                        <div class="p-5 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400">项目核心成员</span>
+                                <span class="text-[10px] text-slate-400">2025.06</span>
+                            </div>
+                            <h4 class="font-bold text-sm mb-2">海南热带雨林生物数据库网站构建</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                                负责文献检索与物种信息整理，搭建部分数据库网页并录入UTF-8编码HTML文件，在VS Code中进行代码调试优化。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content 2: High School Experience -->
+            <div id="highschool-tab" class="tab-content hidden transition-opacity duration-300">
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <div class="p-6 glass-card rounded-2xl border border-slate-200/80 dark:border-slate-800">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-lg font-bold text-brand-600 dark:text-brand-400">包头九中 · 奥赛班</h3>
+                            <span class="text-xs font-mono px-2.5 py-1 bg-slate-100 dark:bg-slate-800 rounded-md">高中时期</span>
+                        </div>
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-medal text-amber-500 mt-1"></i>
+                                <span><strong>羽毛球社团社长:</strong> 高票获选社长，主导举办高一年级羽毛球比赛，并获得男单第四名。</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-palette text-purple-500 mt-1"></i>
+                                <span><strong>版画展一等奖:</strong> 协助老师举办校级版画展比赛，凭借个人胶板画作品脱颖而出荣获一等奖。</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-compass text-blue-500 mt-1"></i>
+                                <span><strong>远见抉择海南大学:</strong> 高二时敏锐察觉2025年海南自由贸易港封关大势，坚定报考海南大学，见证了海大软科排名从118提升至93的共同进步。</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-rocket text-emerald-500 mt-1"></i>
+                                <span><strong>高考后自主创业与赛事统筹:</strong>
+                                    <br>① 万达广场摆摊复盘：售卖手工香薰蜡烛，深刻反思消费群体定位与定价不规范问题；
+                                    <br>② 独立策划首届包头市“建羽杯”高中生羽毛球友谊赛：拉取孙晓建总教练赞助气膜馆场地及裁判团队、邀请包头羽协主席致辞、获取梦缘书店赞助，抖音线上观赛突破3000人。</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content 3: Middle & Elementary School Experience -->
+            <div id="early-tab" class="tab-content hidden transition-opacity duration-300">
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Middle School -->
+                    <div class="p-6 glass-card rounded-2xl border border-slate-200/80 dark:border-slate-800">
+                        <h3 class="text-lg font-bold mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-school text-brand-500"></i> 初中时期 · 包头二十九中
+                        </h3>
+                        <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                            <li>• <strong>互联网启蒙:</strong> 热爱关注马云、雷军等创业者故事，频繁在班会以PPT分享，获调侃外号“小马云”、“丁总”。</li>
+                            <li>• <strong>艺术成果:</strong> 初二色粉作品代表学校在包头市美术馆展出；初三在班外墙展板独立布置个人作品集展示。</li>
+                        </ul>
+                    </div>
+
+                    <!-- Elementary School -->
+                    <div class="p-6 glass-card rounded-2xl border border-slate-200/80 dark:border-slate-800">
+                        <h3 class="text-lg font-bold mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-child text-emerald-500"></i> 小学时期 · 启蒙成长
+                        </h3>
+                        <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                            <li>• <strong>性格与独立性:</strong> 性格极为外向开朗，带领公寓楼孩子玩耍；三四年级起独立买菜做饭，锻炼了较强的自理能力。</li>
+                            <li>• <strong>体育与艺术训练:</strong> 一年级起随教练练习羽毛球至初二（后转为业余爱好）；随美术专业的母亲练习素描，多次在小型比赛中获奖。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Contact Section -->
+        <footer id="contact" class="py-12 bg-slate-900 text-white border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold">丁梓容</h3>
+                        <p class="text-xs text-slate-400 mt-1">海南大学 · 物流管理专业 | 供应链与数据分析</p>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-6 text-xs text-slate-300">
+                        <span><i class="fa-solid fa-phone mr-1.5 text-brand-400"></i> 133-1484-7538</span>
+                        <span><i class="fa-solid fa-envelope mr-1.5 text-brand-400"></i> zirongding@hainanu.edu.cn</span>
+                        <span><i class="fa-solid fa-location-dot mr-1.5 text-brand-400"></i> 海南·海口</span>
+                    </div>
+                </div>
+                <div class="mt-8 pt-6 border-t border-slate-800 text-center text-[11px] text-slate-500">
+                    &copy; 2026 Zirong Ding. All rights reserved. Designed with modern web technology.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Simple JavaScript for interactivity -->
+    <script>
+        // Tab Switcher Logic
+        function switchTab(tabId) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.add('hidden');
+            });
+            // Show selected
+            document.getElementById(tabId).classList.remove('hidden');
+
+            // Reset tab button styling
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-brand-600', 'dark:text-brand-400', 'shadow-sm', 'font-bold');
+                btn.classList.add('text-slate-600', 'dark:text-slate-400');
+            });
+
+            // Highlight active button
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.add('bg-white', 'dark:bg-slate-900', 'text-brand-600', 'dark:text-brand-400', 'shadow-sm', 'font-bold');
+            activeBtn.classList.remove('text-slate-600', 'dark:text-slate-400');
+        }
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
